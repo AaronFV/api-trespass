@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "productos",
+  "info": {
+    "name": "Producto",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "imagenURL": {
+      "type": "text"
+    },
+    "precio": {
+      "type": "integer"
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "talla": {
+      "model": "talla",
+      "via": "productos"
+    }
+  }
+}
