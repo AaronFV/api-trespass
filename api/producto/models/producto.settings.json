@@ -15,9 +15,6 @@
     "nombre": {
       "type": "string"
     },
-    "imagenURL": {
-      "type": "text"
-    },
     "precio": {
       "type": "integer"
     },
@@ -27,6 +24,23 @@
     "talla": {
       "model": "talla",
       "via": "productos"
+    },
+    "Importado": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "imagenURL": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }
